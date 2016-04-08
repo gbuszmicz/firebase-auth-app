@@ -1,4 +1,4 @@
-# A simple local login app template
+# Auth App with React-Native and Firebase
 
 [![Dependency Status](https://david-dm.org/gbuszmicz/firebase-auth-app.svg?style=flat)](https://david-dm.org/gbuszmicz/firebase-auth-app)
 [![devDependency Status](https://david-dm.org/gbuszmicz/firebase-auth-app/dev-status.svg?style=flat)](https://david-dm.org/gbuszmicz/firebase-auth-app#info=devDependencies)
