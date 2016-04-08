@@ -1,0 +1,11 @@
+{
+  "presets": [ "react-native" ],
+  "plugins": [ 
+    "transform-do-expressions",
+    "transform-function-bind",
+    "transform-class-constructor-call",
+    "transform-export-extensions",
+    "syntax-trailing-function-commas",
+    "transform-exponentiation-operator"
+  ]
+}
