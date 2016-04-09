@@ -12,6 +12,10 @@ You can:
 
 Tested only with **Android** so far
 
+<p align="center">
+  <img src ="https://fat.gfycat.com/SingleMadAlligatorsnappingturtle.gif" />
+</p>
+
 It saves the session token using [AsyncStorage](https://facebook.github.io/react-native/docs/asyncstorage.html), in your device.
 If you are authenticated and close the App, next time you open it you will still be authenticated.
 
