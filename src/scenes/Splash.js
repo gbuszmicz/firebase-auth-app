@@ -49,7 +49,11 @@ class Splash extends Component {
   handleLoginWithToken(authToken) {
     let { navigator, loginSuccess, loginFailure } = this.props;
     authWithCustomToken(authToken, function(error, authData) {
-      if (!error) {
+      if(error) {
+        navigator.push(routes.getLogin())
+        loginFailure(error)
+      
+      } else {
       //   console.log("Login Failed!", error);
       // } else {
         // console.log("Authenticated successfully with payload:", authData);
