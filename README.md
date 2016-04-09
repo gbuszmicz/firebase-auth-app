@@ -160,8 +160,12 @@ Also you can select ```Debug in Chrome``` within the emulator ([Genymotion](http
 
 
 ### Bundling APK file for release
-To distribute this Android application via Google Play store or to other devices, you'll need to generate a signed release APK.
-Follow the [oficial documentation](https://facebook.github.io/react-native/docs/signed-apk-android.html)
+If you want to make changes to the app and build your own release follow the [oficial documentation](https://facebook.github.io/react-native/docs/signed-apk-android.html).
+
+The App is ready for being installed in your device without the development environment. You can find the APK file in ```android/app/build/outputs/apk/app-release.apk```.
+Just copy the file to your android phone and install it, or connect your phone via USB and from a console run:
+```cd FirebaseAuthApp/android && ./gradlew installRelease```
+Again, you can follow the [oficial documentation](https://facebook.github.io/react-native/docs/signed-apk-android.html)
 
 
 ### Comments and issues
