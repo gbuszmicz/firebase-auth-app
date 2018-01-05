@@ -44,10 +44,10 @@ class Login extends Component {
         let authToken = authData.token.toString();
         let uid = authData.uid.toString();
         saveUserToken(authToken)
-          .then(user => {
+          .then(() => {
             // console.log('User profile loaded.. Going home!')
             getUserProfile(authData.uid, function(error, profile) {
-              if(error) console.log('Error getting user profile: ', error)
+              if(error) throw new Error('Error getting user profile: ', error)
               if(!error) {
                 let credentials = {
                   firstname: profile.firstname,
@@ -60,7 +60,7 @@ class Login extends Component {
             })
           })
           .catch(error => {
-            console.log('Error saving user: ',error)
+            throw new Error('Error saving user: ', error)
           });    
       }
     })

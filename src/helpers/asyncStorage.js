@@ -9,7 +9,7 @@ export function getUserToken() {
 }
 
 export function saveUserToken(token) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     let user = {token};
     let userString = JSON.stringify(user);
 
