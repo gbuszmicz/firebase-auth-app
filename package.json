@@ -1,6 +1,6 @@
 {
   "name": "FirebaseAuthApp",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": false,
   "description": "Simple authentication app using Firebase",
   "repository": {
@@ -20,7 +20,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "mocha --compilers js:./test/helpers/nativeCompiler.js --require ./test/helpers/chaiImmutable.js",
     "test:watch": "npm run test -- --watch",
-    "lint": "node_modules/eslint/bin/eslint.js src",
+    "lint": "eslint src",
     "android-setup-port": "adb reverse tcp:8081 tcp:8080"
   },
   "dependencies": {
