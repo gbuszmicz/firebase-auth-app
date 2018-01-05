@@ -62,17 +62,17 @@ export default class RemoveForm extends React.Component {
           Please enter your password
         </Text>
         <View style={[styles.inputContainer, this.state.emptyPasswordInput && styles.emptyInput]}>
-        <TextInput
-          style={styles.input}
-          underlineColorAndroid="rgba(0,0,0,0)"
-          placeholder={this.state.passwordPlaceholder}
-          value={this.state.password}
-          onChangeText={this.handlePasswordChange}
-          autoCorrect={false}
-          autoCapitalize="none"
-          keyboardType={'default'}
-          placeholderTextColor={this.state.emptyPasswordInput ? Colors.RED : Colors.MEDIUM_GREY} 
-        />
+          <TextInput
+            style={styles.input}
+            underlineColorAndroid="rgba(0,0,0,0)"
+            placeholder={this.state.passwordPlaceholder}
+            value={this.state.password}
+            onChangeText={this.handlePasswordChange}
+            autoCorrect={false}
+            autoCapitalize="none"
+            keyboardType={'default'}
+            placeholderTextColor={this.state.emptyPasswordInput ? Colors.RED : Colors.MEDIUM_GREY} 
+          />
         </View>
         <TouchableOpacity style={styles.button} onPress={handleHomeRoute}>
           <Text style={{ color: Colors.WHITE }}>No no no, cancel!</Text>

@@ -4,8 +4,8 @@ let parseJson = json => JSON.parse(json);
 
 export function getUserToken() {
   return AsyncStorage
-          .getItem('user')
-          .then(parseJson);
+    .getItem('user')
+    .then(parseJson);
 }
 
 export function saveUserToken(token) {
