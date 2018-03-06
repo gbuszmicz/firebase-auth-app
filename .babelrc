@@ -1,6 +1,8 @@
 {
-  "presets": [ "react-native" ],
-  "plugins": [ 
+  "presets": [
+    "react-native"
+  ],
+  "plugins": [
     "transform-do-expressions",
     "transform-function-bind",
     "transform-class-constructor-call",

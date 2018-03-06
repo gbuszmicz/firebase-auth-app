@@ -24,24 +24,24 @@ import {
 
 function loginRequest(state, email) {
   return state
-          .set('isFetching', true)
-          .setIn(['user','email'], email)
+    .set('isFetching', true)
+    .setIn(['user','email'], email)
 }
 
 function loginSuccess(state, user) {
   return state
-          .set('isAuthenticated', true)
-          .set('isFetching', false)
-          .setIn(['user','firstname'], user.firstname)
-          .setIn(['user','email'], user.email)
-          .setIn(['user','uid'], user.uid)
+    .set('isAuthenticated', true)
+    .set('isFetching', false)
+    .setIn(['user','firstname'], user.firstname)
+    .setIn(['user','email'], user.email)
+    .setIn(['user','uid'], user.uid)
 }
 
 function loginFailure(state, errorMessage) {
   return state
-          .set('isFetching', false)
-          .set('loginWithErrors', true)
-          .set('errorMessage', errorMessage);
+    .set('isFetching', false)
+    .set('loginWithErrors', true)
+    .set('errorMessage', errorMessage);
 }
 
 
@@ -72,39 +72,39 @@ export default function currentUser(state=initialState, action) {
 
     case LOGOUT_SUCCESS:
       return state
-              .set('isAuthenticated', false)
-              .set('isFetching', false)
-              .set('user', Map())
+        .set('isAuthenticated', false)
+        .set('isFetching', false)
+        .set('user', Map())
 
     case LOGOUT_FAILURE:
       return state
-              .set('isFetching', false)
-              .set('errorMessage', action.errorMessage);
+        .set('isFetching', false)
+        .set('errorMessage', action.errorMessage);
 
     case REGISTER_REQUEST:
       return state
-              .set('isFetching', true)
-              .set('registerWithErrors', false)
-              .set('errorMessage', '');
+        .set('isFetching', true)
+        .set('registerWithErrors', false)
+        .set('errorMessage', '');
 
     case REGISTER_SUCCESS:
       return state
-              .set('isFetching', false)
-              .set('user', Map())
+        .set('isFetching', false)
+        .set('user', Map())
 
     case REGISTER_FAILURE:
       return state
-              .set('isFetching', false)
-              .set('registerWithErrors', true)
-              .set('errorMessage', action.errorMessage);
+        .set('isFetching', false)
+        .set('registerWithErrors', true)
+        .set('errorMessage', action.errorMessage);
 
     case LOAD_USER_REQUEST:
       return state
-              .set('isFetching', true)
+        .set('isFetching', true)
 
     case LOAD_USER_FAILURE:
       return state
-              .set('isFetching', false)
+        .set('isFetching', false)
 
     default:
       return state

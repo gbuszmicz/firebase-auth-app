@@ -1,6 +1,6 @@
 {
   "name": "FirebaseAuthApp",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": false,
   "description": "Simple authentication app using Firebase",
   "repository": {
@@ -18,35 +18,35 @@
   },
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "mocha --compilers js:./test/helpers/nativeCompiler.js --require ./test/helpers/chaiImmutable.js",
+    "test": "mocha --require ./test/helpers/nativeCompiler.js --require ./test/helpers/chaiImmutable.js",
     "test:watch": "npm run test -- --watch",
-    "lint": "node_modules/eslint/bin/eslint.js src",
+    "lint": "eslint src",
     "android-setup-port": "adb reverse tcp:8081 tcp:8080"
   },
   "dependencies": {
     "@exponent/react-native-navigator": "^0.4.1",
-    "firebase": "^2.4.2",
+    "firebase": "^4.8.1",
     "immutable": "^3.7.6",
-    "react": "^0.14.8",
-    "react-addons-pure-render-mixin": "^0.14.8",
-    "react-native": "^0.23.0-rc1",
-    "react-native-loading-spinner-overlay": "0.0.6",
-    "react-redux": "^4.4.0",
+    "react": "^16.2.0",
+    "react-addons-pure-render-mixin": "^15.6.2",
+    "react-native": "^0.51.0",
+    "react-native-loading-spinner-overlay": "0.5.2",
+    "react-redux": "^5.0.6",
     "redux": "^3.3.0",
     "redux-immutablejs": "0.0.8",
-    "redux-logger": "^2.6.1",
-    "redux-thunk": "^1.0.3"
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.3.17",
-    "babel-eslint": "^6.0.0",
-    "babel-preset-react-native": "^1.4.0",
+    "babel-eslint": "^8.1.2",
+    "babel-preset-react-native": "^4.0.0",
     "babel-preset-stage-0": "^6.3.13",
-    "chai": "^3.5.0",
+    "chai": "^4.1.2",
     "chai-immutable": "^1.5.3",
-    "eslint": "^2.2.0",
-    "eslint-plugin-react": "^4.1.0",
-    "mocha": "^2.4.5",
-    "remote-redux-devtools": "^0.1.5"
+    "eslint": "^4.14.0",
+    "eslint-plugin-react": "^7.5.1",
+    "mocha": "^4.1.0",
+    "remote-redux-devtools": "^0.5.12"
   }
 }

@@ -28,7 +28,7 @@ class Register extends Component {
 
   handleRegister(firstname, username, password) {
     let { 
-      registerRequest, registerSuccess, registerFailure, 
+      registerRequest, registerFailure,
       loginSuccess, loginFailure,
       navigator 
     } = this.props;
@@ -57,8 +57,8 @@ class Register extends Component {
           lastActivity
         }
         addUserProfile(userData.uid.toString(), userProfile, function(error, profile) {
-          if(error) console.log('Error saving user profile. ',error) // TODO. handle
-          if(!error) console.log(profile)
+          if(error) throw new Error('Error saving user profile. ',error) // TODO. handle
+          if(!error) throw new Error(profile)
 
           // Autologin after registration
           authWithPassword(username, password, function(error, authData) {
@@ -80,7 +80,7 @@ class Register extends Component {
 
               // Save token
               saveUserToken(authToken)
-                .then(user => {
+                .then(() => {
                   let credentials = {
                     firstname,
                     email: username,
@@ -90,8 +90,8 @@ class Register extends Component {
                   navigator.push( routes.getHome() )
                 })
                 .catch(error => {
-                  console.log('Error saving user: ',error)
-                });    
+                  throw new Error('Error saving user: ',error)
+                });
             }
           })
         })

@@ -4,12 +4,12 @@ let parseJson = json => JSON.parse(json);
 
 export function getUserToken() {
   return AsyncStorage
-          .getItem('user')
-          .then(parseJson);
+    .getItem('user')
+    .then(parseJson);
 }
 
 export function saveUserToken(token) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     let user = {token};
     let userString = JSON.stringify(user);
 
